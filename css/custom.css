@@ -1,0 +1,154 @@
+/*oswald font*/
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+/*global resets*/
+html,body{
+	margin:0;
+	padding:0;
+}
+
+/*body background customization*/
+body{
+	box-sizing: border-box;
+	background: #ccc; 
+	background: url('../img/background.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+	font-family: 'Oswald', sans-serif;
+	user-select: none;
+}
+
+/*custom classes*/
+.inline-block{
+	display:inline-block;
+}
+.pink-overlay{
+	color: #f34949;
+	opacity:0.6;
+}
+
+.content-wrapper{
+	background-color: #fff;
+	margin: 30px 0;
+    padding: 0;
+	height: calc(100vh - 60px);
+}
+
+.inner-left-container{
+	padding:15px;
+}
+
+.inner-left-container>p{
+	text-align: justify;
+}
+
+.checklist-container{
+	background-color: #f7f7f7;
+	padding:10px;
+	margin:0;
+	height: calc(100vh - 240px);
+	overflow-y: scroll;
+}
+
+.checklist{
+	background: #fff;
+    width: 150px;
+    height: 150px;
+    padding: 30px;
+    margin: 10px 14%;
+    box-shadow: rgba(0,0,0,0.4) 0px 1px 9px;
+}
+
+.checklist > .top-right{
+	position: absolute;
+	right: 5px;
+	top: 5px;
+}
+.checklist>img{
+	width:78px;
+	height:66px;
+}
+.checklist>h5{
+	margin-bottom: 1px;
+}
+
+.inner-right-container{
+	height: calc(100vh - 90px);
+	overflow-y: auto;
+	padding: 5px;
+}
+
+.inner-right-container .disp-img{
+	width:150px;
+	height:75px;
+}
+.image-wrap{
+	margin-bottom: 5px;
+}
+.image-wrap:hover{
+	background-color: #e8e8e8;
+}
+.progChkContainer{
+	margin-top: -10px;
+}
+.progChkContainer .prog-chk{
+	pointer-events: none;
+}
+
+/*custom checkbox*/
+.checkbox-round {
+    width: 1.3em;
+    height: 1.3em;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid #000;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+.tick-check::after{
+	content: '\2713';
+	position: relative;
+	top:-3px;
+	left:2px;
+	font-weight: bold;
+}
+input.checkbox-round:focus{
+	outline: 0;
+	box-shadow: none;
+}
+.checkbox-round:checked{
+	background-color: #f3645a;
+	border: 1px solid #ddd;
+}
+.checkbox-round.tick-check:checked {
+    background-color: #f34949;
+    color:#fff;
+}
+
+@media screen and (max-width:767px){
+	.content-wrapper{
+		margin:0;
+	}
+	.checklist-container,.content-wrapper,.inner-right-container{
+		height:auto;
+		overflow-y: auto;
+	}
+}
+@media screen and (min-width: 992px) and (max-width:1199px){
+	.checklist-container{
+		height: calc(100vh - 260px)
+	}
+	.check-list{
+		margin: 10px 11%;
+	}
+}
+@media screen and (min-width:768px) and (max-width:991px){
+	.checklist-container{
+		height: calc(100vh - 280px)
+	}
+}
+
